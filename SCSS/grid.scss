@@ -1,0 +1,30 @@
+.grid {
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns:
+    minmax(min-content, max-content)
+    minmax(auto, auto)
+    minmax(30%, max-content);
+  column-gap: 10px;
+}
+
+.navbar {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.content-container {
+  grid-column: 2/3;
+}
+
+.trends {
+  grid-column: 3/4;
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 1200px) {
+  .grid {
+    width: 120vh;
+    margin: 0 auto;
+  }
+}

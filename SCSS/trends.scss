@@ -1,0 +1,120 @@
+@import "./config";
+
+.right_navigation {
+  @include DisplayFlex(column, "", "");
+  gap: 10px;
+  align-items: stretch;
+  padding: 0.5rem;
+
+  .input__section {
+    input {
+      background: $secondary_color;
+      padding: 0.6rem;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      width: 100%;
+      font-size: clamp(1rem, 2vh, 1.1rem);
+    }
+  }
+
+  // TRENDS FOR YOU
+  .trends__for__you {
+    background: $secondary_color;
+    border-radius: 20px;
+
+    section {
+      margin-bottom: 0.5rem;
+    }
+    .trends__title__section {
+      @include DisplayFlex("", center, space-between);
+      padding: 1rem;
+      h2 {
+        font-size: clamp(1rem, 1vh, 1.1rem);
+      }
+      svg {
+        width: clamp(1.3rem, 1vh, 1.1rem);
+      }
+    }
+
+    .trends_content {
+      .content {
+        @include DisplayFlex(column, "", "");
+        padding: 0.5rem 1rem;
+        .trend-category,
+        .trend-tweets {
+          font-size: clamp(0.9rem, 0.4vh, 1.1rem);
+          color: #ccc;
+        }
+        .trend-title {
+          font-size: clamp(1rem, 2vh, 1rem);
+          font-weight: bold;
+        }
+      }
+      .content:hover {
+        background: $hoverColor;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.to__follow__section {
+  background: $secondary_color;
+  border-radius: 20px;
+
+  .to-follow-title-section {
+    padding: 1rem;
+    h2 {
+      font-size: clamp(1rem, 1vh, 1.1rem);
+    }
+  }
+
+  .to-follow-content {
+    @include DisplayFlex("", center, space-between);
+    padding-right: 1rem;
+    // Contains image, name, and username
+    .to-follow {
+      @include DisplayFlex("", center, "");
+      padding: 1rem;
+      gap: 3px;
+      .profile-section {
+        img {
+          width: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          width: 3rem;
+          height: 3rem;
+          object-position: center;
+        }
+      }
+      .username-section {
+        @include DisplayFlex(column, "", "");
+        .username {
+          color: #ccc;
+        }
+      }
+    }
+    .follow-btn-section {
+      button {
+        @include buttonStyle();
+      }
+      button:hover {
+        @include buttonHover();
+      }
+    }
+  }
+  .to-follow-content:hover {
+    background: $hoverColor;
+    cursor: pointer;
+  }
+}
+
+.show-more-section {
+  padding: 0.5rem 1rem;
+  p {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vh, 1.1rem);
+    color: $primary-color;
+  }
+}

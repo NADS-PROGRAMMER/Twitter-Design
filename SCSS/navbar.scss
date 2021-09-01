@@ -1,0 +1,52 @@
+@import "./config";
+
+.navbar {
+  display: none;
+  padding: 0.5rem;
+  section {
+    @include DisplayFlex("", center, "");
+    gap: 10px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    width: auto;
+    svg {
+      width: clamp(1.5rem, 1vh, 2rem);
+    }
+    p {
+      display: none;
+      font-weight: bold;
+    }
+  }
+  section:hover {
+    background: $hoverColor;
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  button {
+    display: none;
+    @include buttonStyle();
+    width: 12rem;
+    padding: 0.8rem;
+    font-size: clamp(1rem, 1vh, 1.1rem);
+  }
+  button:hover {
+    @include buttonHover();
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .navbar {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    section p {
+      display: block;
+    }
+    button {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+$primary-color: #00acee;
+$secondary_color: #15181c;
+$hoverColor: rgba(58, 57, 57, 0.3);
+
+@mixin DisplayFlex(
+  $flex-direction: row,
+  $align-items: none,
+  $justify-content: none
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin buttonStyle() {
+  background: $primary-color;
+  padding: 0.5rem;
+  width: 6em;
+  border-radius: 25px;
+  border: none;
+}
+
+@mixin buttonHover() {
+  background: #05a2e0;
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+.tweets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem 1rem;
+  border: 0.5px solid #ccc;
+
+  .tweet-content {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    .tweet-profile-photo {
+      border-radius: 50%;
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+      }
+      background-position: center;
+      background-size: cover;
+      flex: 0 0 4em;
+    }
+
+    .username-and-tweet {
+      // Edilyn Monroe
+      .username {
+        display: flex;
+        font-size: clamp(1rem, 1vh, 1.1rem);
+        flex-wrap: wrap;
+        gap: 3px;
+        // @codingmonroe
+        .account {
+          color: gray;
+        }
+      }
+    }
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 1;
+    }
+    svg {
+      width: 1.2rem;
+    }
+  }
+}
